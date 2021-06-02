@@ -7,8 +7,10 @@ class Pongoterm < Formula
 
   def install
     system "cd scripts && make pongoterm"
-    bin.mkpath
-    bin.install "scripts/pongoterm"
+    if File.file?("scripts/pongoterm")
+      bin.mkpath
+      bin.install "scripts/pongoterm"
+    end
   end
 
   test do
