@@ -6,9 +6,9 @@ class Pongoterm < Formula
   license "MIT"
 
   def install
-   system "cd scripts && make pongoterm"
-   bin.mkpath
-   bin.install "scripts/pongoterm"
+    system "cd scripts && make pongoterm"
+    bin.mkpath
+    bin.install "scripts/pongoterm"
   end
 
   test do
